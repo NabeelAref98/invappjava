@@ -1,1 +1,1 @@
-# invappjava
+# Inventory Management System
