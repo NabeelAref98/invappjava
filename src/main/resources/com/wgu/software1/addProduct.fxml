@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.software1.Controllers.AddProductController">
+   <children>
+      <Label layoutX="315.0" layoutY="225.0" text="Min" />
+      <Label layoutX="80.0" layoutY="225.0" text="Max" />
+      <Label layoutX="80.0" layoutY="192.0" text="Price" />
+      <Label layoutX="80.0" layoutY="159.0" text="Inv" />
+      <Label layoutX="80.0" layoutY="128.0" text="Name" />
+      <Label layoutX="80.0" layoutY="95.0" text="ID" />
+      <Label layoutX="66.0" layoutY="53.0" text="Add Product">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSave" layoutX="813.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#saveNewProduct" text="Save" />
+      <Button fx:id="btnCancel" layoutX="874.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#SwitchtoMainMenu" text="Cancel" />
+      <TextField fx:id="txtMin" layoutX="346.0" layoutY="221.0" />
+      <TextField fx:id="txtMax" layoutX="151.0" layoutY="221.0" />
+      <TextField fx:id="txtPrice" layoutX="149.0" layoutY="188.0" />
+      <TextField fx:id="txtInv" layoutX="149.0" layoutY="156.0" />
+      <TextField fx:id="txtName" layoutX="149.0" layoutY="125.0" />
+      <TextField fx:id="txtId" disable="true" editable="false" layoutX="149.0" layoutY="92.0" text="Auto Generated - disabled" />
+      <TableView fx:id="tbCurrentParts" layoutX="522.0" layoutY="265.0" prefHeight="172.0" prefWidth="413.0" />
+      <TableView fx:id="tbAllParts" layoutX="522.0" layoutY="42.0" prefHeight="161.0" prefWidth="413.0" />
+      <TextField fx:id="txtSearch" layoutX="779.0" layoutY="13.0" onKeyTyped="#onSearchPart" promptText="Search by Part ID or Name" />
+      <Button fx:id="btnAction" layoutX="881.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#addPart" text="Add" />
+      <Button fx:id="btnRemoveAssociatePart" layoutX="790.0" layoutY="448.0" mnemonicParsing="false" onMouseClicked="#removePart" text="Remove Associate Part" />
+      <Label fx:id="lblError" layoutX="522.0" layoutY="17.0" textFill="RED" />
+   </children>
+</Pane>
